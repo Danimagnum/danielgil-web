@@ -20,7 +20,7 @@ export function Studies() {
 
         <div className="relative">
           <div className="absolute left-0 top-6 right-0 h-px bg-border hidden md:block" />
-          <div className="grid md:grid-cols-5 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {studies.map((s, i) => (
               <div key={s.title} className="relative animate-fade-up" style={{ animationDelay: `${i * 0.08}s` }}>
                 <div className="hidden md:block relative mb-8">
