@@ -1,4 +1,4 @@
-const items = [
+import { Reveal } from "./Reveal";
   {
     tag: "Cliente principal",
     title: "AGROGARPE",

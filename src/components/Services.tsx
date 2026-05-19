@@ -1,4 +1,5 @@
 import { Code2, Share2, Sparkles, Workflow, Palette } from "lucide-react";
+import { Reveal } from "./Reveal";
 
 const services = [
   {

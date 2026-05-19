@@ -1,4 +1,4 @@
-const projects = [
+import { Reveal } from "./Reveal";
   {
     name: "AGROGARPE",
     category: "Branding · Web · Social",

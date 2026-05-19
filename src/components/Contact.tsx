@@ -1,4 +1,5 @@
 import { Instagram, Mail, MessageCircle, QrCode } from "lucide-react";
+import { Reveal } from "./Reveal";
 
 const items = [
   { icon: MessageCircle, label: "WhatsApp", value: "+34 600 000 000", href: "https://wa.me/34600000000" },
