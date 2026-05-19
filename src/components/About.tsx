@@ -1,4 +1,14 @@
 import { Reveal } from "./Reveal";
+
+export function About() {
+  return (
+    <Reveal as="section" className="contents">
+      <></>
+    </Reveal>
+  );
+}
+
+function _About() {
   return (
     <section id="sobre-mi" className="relative py-32 px-6">
       <div className="max-w-5xl mx-auto">
