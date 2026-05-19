@@ -22,27 +22,28 @@ export function Contact() {
         </h2>
 
         <div className="grid sm:grid-cols-2 gap-4">
-          {items.map((it) => (
-            <a
-              key={it.label}
-              href={it.href}
-              target="_blank"
-              rel="noreferrer"
-              className="group flex items-center gap-5 rounded-2xl bg-surface-elevated border border-border p-6 hover:shadow-elevated hover:-translate-y-0.5 transition-all"
-            >
-              <div className="size-12 rounded-xl bg-accent flex items-center justify-center text-foreground group-hover:bg-foreground group-hover:text-background transition-colors">
-                <it.icon className="size-5" strokeWidth={2} />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">
-                  {it.label}
+          {items.map((it, i) => (
+            <Reveal key={it.label} delay={i * 80}>
+              <a
+                href={it.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center gap-5 rounded-2xl bg-surface-elevated border border-border p-6 hover:shadow-elevated hover:-translate-y-0.5 transition-all"
+              >
+                <div className="size-12 rounded-xl bg-accent flex items-center justify-center text-foreground group-hover:bg-foreground group-hover:text-background transition-colors">
+                  <it.icon className="size-5" strokeWidth={2} />
                 </div>
-                <div className="font-medium truncate">{it.value}</div>
-              </div>
-              <span className="text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-foreground">
-                →
-              </span>
-            </a>
+                <div className="flex-1 min-w-0">
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground">
+                    {it.label}
+                  </div>
+                  <div className="font-medium truncate">{it.value}</div>
+                </div>
+                <span className="text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-foreground">
+                  →
+                </span>
+              </a>
+            </Reveal>
           ))}
         </div>
       </div>

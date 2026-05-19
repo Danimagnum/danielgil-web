@@ -46,8 +46,10 @@ export function Experience() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {items.map((it, i) => (
-            <article
+            <Reveal
               key={it.title}
+              delay={i * 80}
+              as="article"
               className={`group relative rounded-3xl bg-surface-elevated border border-border p-8 hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 ${
                 i === 0 ? "lg:col-span-2 lg:row-span-1" : ""
               }`}
@@ -64,7 +66,7 @@ export function Experience() {
                 {it.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">{it.desc}</p>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>

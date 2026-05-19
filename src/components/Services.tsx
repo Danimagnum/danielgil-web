@@ -41,9 +41,10 @@ export function Services() {
         </h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {services.map((s) => (
-            <div
+          {services.map((s, i) => (
+            <Reveal
               key={s.title}
+              delay={i * 70}
               className="group relative rounded-3xl bg-surface-elevated border border-border p-8 hover:shadow-elevated hover:-translate-y-1 transition-all duration-500"
             >
               <div className="size-12 rounded-2xl bg-gradient-primary text-primary-foreground flex items-center justify-center mb-6 shadow-glow">
@@ -55,7 +56,7 @@ export function Services() {
                 <span className="text-muted-foreground">Conoce más</span>
                 <span className="text-foreground transition-transform group-hover:translate-x-1">→</span>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
