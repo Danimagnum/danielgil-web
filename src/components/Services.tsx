@@ -1,21 +1,21 @@
-import { Code2, Share2, Sparkles, Workflow, Palette } from "lucide-react";
+import { Code2, Share2, Sparkles, Workflow, Palette, AppWindow, Layers, Database } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const services = [
   {
     icon: Code2,
-    title: "Diseño web",
+    title: "Diseño y desarrollo web",
     desc: "Webs rápidas, accesibles y con estética premium. Optimizadas para conversión.",
   },
   {
-    icon: Share2,
-    title: "Redes sociales",
-    desc: "Estrategia, contenido y comunidad. Presencia coherente en cada plataforma.",
+    icon: AppWindow,
+    title: "Desarrollo de aplicaciones",
+    desc: "Aplicaciones web a medida, escalables y centradas en la experiencia de usuario.",
   },
   {
-    icon: Sparkles,
-    title: "Inteligencia Artificial",
-    desc: "Agentes, contenido generativo e integraciones IA aplicadas a negocio.",
+    icon: Layers,
+    title: "Full Stack",
+    desc: "Frontend, backend e infraestructura. Producto completo, de la idea al deploy.",
   },
   {
     icon: Workflow,
@@ -23,9 +23,24 @@ const services = [
     desc: "Flujos que conectan herramientas y eliminan trabajo manual repetitivo.",
   },
   {
+    icon: Sparkles,
+    title: "Inteligencia Artificial",
+    desc: "Agentes, contenido generativo e integraciones IA aplicadas a negocio.",
+  },
+  {
     icon: Palette,
     title: "Branding digital",
     desc: "Identidad visual, sistema de marca y comunicación con personalidad.",
+  },
+  {
+    icon: Share2,
+    title: "Redes sociales",
+    desc: "Estrategia, contenido y comunidad. Presencia coherente en cada plataforma.",
+  },
+  {
+    icon: Database,
+    title: "Bases de datos SQL",
+    desc: "Modelado, consultas y arquitectura de datos robusta para tu producto.",
   },
 ];
 
@@ -44,7 +59,7 @@ export function Services() {
           {services.map((s, i) => (
             <Reveal
               key={s.title}
-              delay={i * 70}
+              delay={i * 60}
               className="group relative rounded-3xl bg-surface-elevated border border-border p-8 hover:shadow-elevated hover:-translate-y-1 transition-all duration-500"
             >
               <div className="size-12 rounded-2xl bg-gradient-primary text-primary-foreground flex items-center justify-center mb-6 shadow-glow">
