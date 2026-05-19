@@ -1,9 +1,10 @@
 const studies = [
-  { year: "Grado", title: "Ingeniería de Organización Industrial", place: "Universidad" },
-  { year: "Máster", title: "Máster de Profesorado", place: "Formación oficial" },
-  { year: "Tech", title: "Desarrollo web", place: "Stack moderno full-stack" },
-  { year: "Industria", title: "Automatización industrial", place: "PLC, sistemas, procesos" },
-  { year: "IA", title: "IA y branding digital", place: "Modelos generativos aplicados" },
+  { year: "Grado", title: "Ingeniería de Telecomunicaciones", place: "Formación universitaria" },
+  { year: "Web", title: "Cursos de desarrollo web", place: "Stack full-stack moderno" },
+  { year: "Ops", title: "Cursos de automatización", place: "Flujos, APIs e integraciones" },
+  { year: "IA", title: "Formación en inteligencia artificial", place: "Modelos generativos y agentes" },
+  { year: "Marca", title: "Branding digital", place: "Identidad y comunicación" },
+  { year: "Datos", title: "Bases de datos SQL", place: "Modelado y consultas" },
 ];
 
 export function Studies() {
