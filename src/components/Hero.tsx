@@ -48,15 +48,39 @@ export function Hero() {
           </a>
           <a
             href="#proyectos"
-            className="inline-flex items-center gap-2 rounded-full bg-surface-elevated border border-border px-7 py-3.5 text-sm font-medium text-foreground hover:bg-accent transition-colors shadow-soft"
+            className="group inline-flex items-center gap-2 rounded-full bg-surface-elevated border border-border px-7 py-3.5 text-sm font-medium text-foreground hover:bg-accent transition-colors shadow-soft"
           >
             Ver proyectos
             <span aria-hidden className="transition-transform group-hover:translate-x-0.5">↗</span>
           </a>
         </div>
 
+        {/* Quick access pills */}
         <div
-          className="animate-fade-in mt-20 flex items-center justify-center gap-8 text-xs uppercase tracking-[0.2em] text-muted-foreground/60"
+          className="animate-fade-up mt-10 flex flex-wrap items-center justify-center gap-2 max-w-2xl mx-auto"
+          style={{ animationDelay: "0.45s" }}
+        >
+          {[
+            { href: "#sobre-mi", label: "Sobre mí" },
+            { href: "#experiencia", label: "Experiencia" },
+            { href: "#estudios", label: "Estudios" },
+            { href: "#servicios", label: "Servicios" },
+            { href: "#proyectos", label: "Proyectos" },
+            { href: "#contacto", label: "Contacto" },
+          ].map((q) => (
+            <a
+              key={q.href}
+              href={q.href}
+              className="group inline-flex items-center gap-1.5 rounded-full glass px-4 py-2 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <span className="size-1 rounded-full bg-primary/60 group-hover:bg-primary transition-colors" />
+              {q.label}
+            </a>
+          ))}
+        </div>
+
+        <div
+          className="animate-fade-in mt-16 flex items-center justify-center gap-8 text-xs uppercase tracking-[0.2em] text-muted-foreground/60"
           style={{ animationDelay: "0.6s" }}
         >
           <span>Web</span>
@@ -67,6 +91,7 @@ export function Hero() {
           <span className="size-1 rounded-full bg-muted-foreground/40" />
           <span>Automatización</span>
         </div>
+
       </div>
     </section>
   );

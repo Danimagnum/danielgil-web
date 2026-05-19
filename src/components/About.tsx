@@ -10,24 +10,27 @@ export function About() {
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.05] tracking-tight max-w-4xl">
             Ayudo a negocios reales a{" "}
-            <span className="text-gradient">digitalizar, automatizar</span> y crecer con
-            inteligencia artificial.
+            <span className="text-gradient">digitalizar, automatizar</span> y crecer mediante
+            tecnología, diseño e inteligencia artificial.
           </h2>
         </Reveal>
 
         <div className="mt-16 grid md:grid-cols-2 gap-12 max-w-4xl">
           <Reveal delay={120}>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Combino ingeniería, diseño y tecnología para crear experiencias digitales que
-              funcionan. Trabajo con empresas que quieren dar el salto: presencia online
-              cuidada, procesos automatizados y una marca que comunica con claridad.
+              Soy un perfil <span className="text-foreground font-medium">full stack</span> con
+              formación en Ingeniería de Telecomunicaciones y experiencia en desarrollo web,
+              automatización, branding digital, redes sociales, inteligencia artificial y bases
+              de datos. Combino ingeniería, creatividad y estrategia para crear experiencias
+              digitales modernas, funcionales y orientadas a resultados reales.
             </p>
           </Reveal>
           <Reveal delay={220}>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Desde branding y redes sociales hasta integración de IA y desarrollo web a
-              medida. Cada proyecto se diseña con intención, ejecuta con precisión y se
-              mide por resultados reales.
+              Desde presencia online y diseño de marca hasta automatización de procesos,
+              desarrollo de aplicaciones e integración de IA. Cada proyecto se diseña con
+              intención, se desarrolla con precisión y se enfoca en aportar valor real a
+              empresas que quieren evolucionar y diferenciarse digitalmente.
             </p>
           </Reveal>
         </div>
