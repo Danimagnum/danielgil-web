@@ -1,3 +1,5 @@
+import { Reveal } from "./Reveal";
+
 const projects = [
   {
     name: "AGROGARPE",
@@ -42,8 +44,10 @@ export function Projects() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((p, i) => (
-            <article
+            <Reveal
               key={p.name}
+              delay={i * 90}
+              as="article"
               className="group relative rounded-3xl overflow-hidden border border-border bg-surface-elevated hover:shadow-elevated transition-all duration-500 hover:-translate-y-1"
             >
               <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.accent} overflow-hidden`}>
@@ -66,7 +70,7 @@ export function Projects() {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
               </div>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>
