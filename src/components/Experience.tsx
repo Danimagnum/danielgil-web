@@ -1,4 +1,6 @@
 import { Reveal } from "./Reveal";
+
+const items = [
   {
     tag: "Cliente principal",
     title: "AGROGARPE",

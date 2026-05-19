@@ -1,4 +1,6 @@
 import { Reveal } from "./Reveal";
+
+const projects = [
   {
     name: "AGROGARPE",
     category: "Branding · Web · Social",
