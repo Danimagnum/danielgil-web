@@ -1,4 +1,4 @@
-export function About() {
+import { Reveal } from "./Reveal";
   return (
     <section id="sobre-mi" className="relative py-32 px-6">
       <div className="max-w-5xl mx-auto">
