@@ -1,4 +1,15 @@
-import { Code2, Share2, Sparkles, Workflow, Palette, AppWindow, Layers, Database } from "lucide-react";
+import {
+  Code2,
+  Share2,
+  Sparkles,
+  Workflow,
+  Palette,
+  AppWindow,
+  Layers,
+  Database,
+  Megaphone,
+  Server,
+} from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const services = [
@@ -19,7 +30,7 @@ const services = [
   },
   {
     icon: Workflow,
-    title: "Automatización",
+    title: "Automatización digital",
     desc: "Flujos que conectan herramientas y eliminan trabajo manual repetitivo.",
   },
   {
@@ -33,14 +44,24 @@ const services = [
     desc: "Identidad visual, sistema de marca y comunicación con personalidad.",
   },
   {
+    icon: Megaphone,
+    title: "Marketing digital",
+    desc: "Estrategia, posicionamiento y campañas con foco en crecimiento medible.",
+  },
+  {
     icon: Share2,
     title: "Redes sociales",
-    desc: "Estrategia, contenido y comunidad. Presencia coherente en cada plataforma.",
+    desc: "Contenido y comunidad. Presencia coherente y profesional en cada plataforma.",
   },
   {
     icon: Database,
     title: "Bases de datos SQL",
     desc: "Modelado, consultas y arquitectura de datos robusta para tu producto.",
+  },
+  {
+    icon: Server,
+    title: "Infraestructura tecnológica",
+    desc: "Gestión integral de sistemas, herramientas y soporte tecnológico para empresas.",
   },
 ];
 
@@ -49,10 +70,11 @@ export function Services() {
     <section id="servicios" className="relative py-32 px-6 bg-surface">
       <div className="max-w-6xl mx-auto">
         <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
-          04 — Servicios
+          04 — Soluciones digitales
         </div>
         <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight max-w-3xl mb-16">
-          Todo lo que necesitas para llevar tu marca al <span className="text-gradient">siguiente nivel</span>.
+          Tecnología, diseño y estrategia para llevar tu empresa al{" "}
+          <span className="text-gradient">siguiente nivel</span>.
         </h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

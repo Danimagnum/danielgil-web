@@ -1,10 +1,11 @@
 const studies = [
   { year: "Grado", title: "Ingeniería de Telecomunicaciones", place: "Formación universitaria" },
-  { year: "Web", title: "Cursos de desarrollo web", place: "Stack full-stack moderno" },
-  { year: "Ops", title: "Cursos de automatización", place: "Flujos, APIs e integraciones" },
-  { year: "IA", title: "Formación en inteligencia artificial", place: "Modelos generativos y agentes" },
-  { year: "Marca", title: "Branding digital", place: "Identidad y comunicación" },
-  { year: "Datos", title: "Bases de datos SQL", place: "Modelado y consultas" },
+  { year: "Web", title: "Desarrollo web Full Stack", place: "Aplicaciones modernas y arquitectura web" },
+  { year: "Ops", title: "Automatización digital", place: "Flujos, APIs e integraciones" },
+  { year: "IA", title: "Inteligencia Artificial", place: "Modelos generativos y automatización IA" },
+  { year: "Growth", title: "Marketing Digital", place: "Estrategia digital y posicionamiento online" },
+  { year: "Marca", title: "Branding Digital", place: "Identidad visual y comunicación" },
+  { year: "Datos", title: "Bases de datos SQL", place: "Modelado, consultas y arquitectura de datos" },
 ];
 
 export function Studies() {
@@ -20,7 +21,7 @@ export function Studies() {
 
         <div className="relative">
           <div className="absolute left-0 top-6 right-0 h-px bg-border hidden md:block" />
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {studies.map((s, i) => (
               <div key={s.title} className="relative animate-fade-up" style={{ animationDelay: `${i * 0.08}s` }}>
                 <div className="hidden md:block relative mb-8">
