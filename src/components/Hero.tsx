@@ -28,11 +28,11 @@ export function Hero() {
         >
           Diseño web <span className="text-foreground">·</span> IA{" "}
           <span className="text-foreground">·</span> Automatización{" "}
-          <span className="text-foreground">·</span> Redes Sociales
+          <span className="text-foreground">·</span> Marketing Digital
         </p>
 
         <div
-          className="animate-fade-up mt-10 flex flex-col sm:flex-row items-center justify-center gap-3"
+          className="animate-fade-up mt-10 flex items-center justify-center"
           style={{ animationDelay: "0.3s" }}
         >
           <a
@@ -45,13 +45,6 @@ export function Hero() {
               <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z" />
             </svg>
             WhatsApp
-          </a>
-          <a
-            href="#proyectos"
-            className="group inline-flex items-center gap-2 rounded-full bg-surface-elevated border border-border px-7 py-3.5 text-sm font-medium text-foreground hover:bg-accent transition-colors shadow-soft"
-          >
-            Ver proyectos
-            <span aria-hidden className="transition-transform group-hover:translate-x-0.5">↗</span>
           </a>
         </div>
 
@@ -79,18 +72,6 @@ export function Hero() {
           ))}
         </div>
 
-        <div
-          className="animate-fade-in mt-16 flex items-center justify-center gap-8 text-xs uppercase tracking-[0.2em] text-muted-foreground/60"
-          style={{ animationDelay: "0.6s" }}
-        >
-          <span>Web</span>
-          <span className="size-1 rounded-full bg-muted-foreground/40" />
-          <span>IA</span>
-          <span className="size-1 rounded-full bg-muted-foreground/40" />
-          <span>Branding</span>
-          <span className="size-1 rounded-full bg-muted-foreground/40" />
-          <span>Automatización</span>
-        </div>
 
       </div>
     </section>
