@@ -19,7 +19,7 @@ export function About() {
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.05] tracking-tight max-w-4xl">
             Ayudo a negocios reales a{" "}
-            <span text-gradient="true" className="text-gradient">digitalizar, automatizar</span> y
+            <span className="text-gradient">digitalizar, automatizar</span> y
             crecer mediante tecnología, ingeniería e inteligencia artificial.
           </h2>
         </Reveal>
