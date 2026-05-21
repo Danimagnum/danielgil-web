@@ -58,7 +58,6 @@ export function Hero() {
             { href: "#experiencia", label: "Experiencia" },
             { href: "#estudios", label: "Estudios" },
             { href: "#servicios", label: "Servicios" },
-            { href: "#proyectos", label: "Proyectos" },
             { href: "#contacto", label: "Contacto" },
           ].map((q) => (
             <a
