@@ -1,11 +1,37 @@
-import { Instagram, Mail, MessageCircle, QrCode } from "lucide-react";
+import { Instagram, Linkedin, Mail, MessageCircle, QrCode } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const items = [
-  { icon: MessageCircle, label: "WhatsApp", value: "+34 600 000 000", href: "https://wa.me/34600000000" },
-  { icon: Instagram, label: "Instagram", value: "@impulsodigital", href: "https://instagram.com" },
-  { icon: Mail, label: "Email", value: "hola@agrogarpe.es", href: "mailto:hola@agrogarpe.es" },
-  { icon: QrCode, label: "Portfolio", value: "digital.agrogarpe.es", href: "#" },
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "+34 613 13 90 17",
+    href: "https://wa.me/34613139017",
+  },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    value: "@danielgil.io",
+    href: "https://instagram.com/danielgil.io",
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    value: "danielgil@agrogarpe.es",
+    href: "mailto:danielgil@agrogarpe.es",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "Daniel Gil",
+    href: "https://www.linkedin.com/in/daniel-garcia-gil-b37212175/?skipRedirect=true",
+  },
+  {
+    icon: QrCode,
+    label: "Portfolio",
+    value: "digital.agrogarpe.es",
+    href: "https://digital.agrogarpe.es",
+  },
 ];
 
 export function Contact() {

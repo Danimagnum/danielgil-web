@@ -6,17 +6,20 @@ const items = [
     period: "2022 — Actualidad",
     role: "Gestión digital integral",
     points: [
-      "Presencia online y branding",
-      "Automatización e infraestructura tecnológica",
-      "Gestión de contenido y desarrollo digital",
+      "Presencia online",
+      "Branding",
+      "Automatización",
+      "Infraestructura tecnológica",
+      "Gestión de contenido",
+      "Desarrollo digital",
     ],
     featured: true,
   },
   {
     company: "Pavimentos Generalife SL",
-    period: "Colaboración",
+    period: "2022 — Actualidad",
     role: "Soporte digital",
-    points: ["Soporte digital", "Automatización de procesos"],
+    points: ["Soporte digital", "Automatización"],
   },
   {
     company: "Importaciones Xibanya",
@@ -28,8 +31,15 @@ const items = [
     company: "REPSOL",
     period: "2024 — 2025",
     role: "Bases de datos SQL",
-    points: ["Gestión y modelado de datos", "Arquitectura SQL"],
+    points: ["Bases de datos SQL", "Gestión y modelado de datos"],
   },
+];
+
+const techGroups = [
+  ["React", "Next.js", "Tailwind CSS", "Node.js", "Python"],
+  ["SQL", "PostgreSQL", "Snowflake", "DBT", "AWS"],
+  ["OpenAI", "APIs REST", "n8n"],
+  ["Power BI", "GitHub", "Figma"],
 ];
 
 export function Experience() {
@@ -88,6 +98,35 @@ export function Experience() {
             </Reveal>
           ))}
         </div>
+
+        {/* Tecnologías & Herramientas */}
+        <Reveal delay={120}>
+          <div className="mt-16 rounded-3xl bg-surface-elevated border border-border p-8 sm:p-12">
+            <div className="flex items-center justify-between mb-8 flex-wrap gap-2">
+              <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                Tecnologías & Herramientas
+              </div>
+              <span className="text-xs text-muted-foreground">/ Stack</span>
+            </div>
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-4">
+              {techGroups.map((group, gi) => (
+                <div key={gi} className="flex items-center flex-wrap gap-x-3 gap-y-2">
+                  {group.map((t) => (
+                    <span
+                      key={t}
+                      className="inline-flex items-center rounded-full border border-border bg-background px-4 py-1.5 text-sm font-medium text-foreground/80 hover:text-foreground hover:border-foreground/30 hover:-translate-y-0.5 transition-all"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                  {gi < techGroups.length - 1 && (
+                    <span className="text-2xl text-muted-foreground/40 font-light px-1">/</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
