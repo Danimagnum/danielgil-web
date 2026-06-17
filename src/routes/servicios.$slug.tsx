@@ -110,7 +110,7 @@ function ServicePage() {
               Tecnologías
             </div>
             <div className="flex flex-wrap gap-2">
-              {service.tech.map((t) => (
+              {service.tech.map((t: string) => (
                 <span
                   key={t}
                   className="px-4 py-2 rounded-full border border-border bg-surface-elevated text-sm text-foreground"
