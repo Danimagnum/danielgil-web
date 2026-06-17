@@ -91,7 +91,7 @@ function ServicePage() {
         </p>
 
         <div className="grid sm:grid-cols-2 gap-4 mb-16">
-          {service.features.map((f) => (
+          {service.features.map((f: string) => (
             <div
               key={f}
               className="rounded-2xl border border-border bg-surface-elevated p-6 flex items-start gap-3"
