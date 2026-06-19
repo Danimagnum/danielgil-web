@@ -72,10 +72,10 @@ function ServicePage() {
         <div className="flex items-center justify-between mb-12">
           <Link
             to="/"
-            hash="servicios"
+            hash="estudios"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
-            <ArrowLeft className="size-4" /> Volver a servicios
+            <ArrowLeft className="size-4" /> Volver al portfolio
           </Link>
           <Link
             to="/"

@@ -10,7 +10,7 @@ export function About() {
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.05] tracking-tight max-w-4xl">
             Desarrollo software, automatizaciones y{" "}
-            <span className="text-gradient">soluciones digitales</span> para empresas y negocios.
+            <span className="text-gradient">soluciones digitales</span> para empresas.
           </h2>
         </Reveal>
 
