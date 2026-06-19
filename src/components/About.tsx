@@ -1,14 +1,5 @@
 import { Reveal } from "./Reveal";
 
-const pillars = [
-  "Ingeniería de Telecomunicaciones",
-  "Full Stack",
-  "Inteligencia Artificial",
-  "Automatización",
-  "Bases de datos SQL",
-  "Branding & Marketing Digital",
-];
-
 export function About() {
   return (
     <section id="sobre-mi" className="relative py-32 px-6">
@@ -19,8 +10,7 @@ export function About() {
           </div>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.05] tracking-tight max-w-4xl">
             Desarrollo software, automatizaciones y{" "}
-            <span className="text-gradient">soluciones digitales</span> para empresas y negocios
-            mediante tecnología e inteligencia artificial.
+            <span className="text-gradient">soluciones digitales</span> para empresas y negocios.
           </h2>
         </Reveal>
 
@@ -36,34 +26,12 @@ export function About() {
           <Reveal delay={200}>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Trabajo tanto con empresas que buscan{" "}
-              <span className="text-foreground font-medium">talento técnico</span> para desarrollar
-              aplicaciones y sistemas a medida, como con negocios que desean mejorar su presencia
-              digital, optimizar procesos e impulsar su crecimiento mediante soluciones tecnológicas.
-            </p>
-          </Reveal>
-          <Reveal delay={280} className="md:col-span-2">
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-              Combino <span className="text-foreground font-medium">ingeniería, creatividad y
-              visión estratégica</span> para diseñar soluciones modernas, funcionales y orientadas
-              a resultados, desde aplicaciones web y automatizaciones hasta diseño web e integración
-              de inteligencia artificial.
+              <span className="text-foreground font-medium">apoyo técnico</span> para desarrollar
+              aplicaciones y sistemas, como con negocios que desean mejorar su presencia digital y
+              optimizar procesos.
             </p>
           </Reveal>
         </div>
-
-        <Reveal delay={360}>
-          <div className="mt-14 flex flex-wrap gap-2">
-            {pillars.map((p) => (
-              <span
-                key={p}
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-4 py-2 text-xs font-medium text-muted-foreground"
-              >
-                <span className="size-1 rounded-full bg-primary/70" />
-                {p}
-              </span>
-            ))}
-          </div>
-        </Reveal>
       </div>
     </section>
   );
