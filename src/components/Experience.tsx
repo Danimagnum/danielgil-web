@@ -30,8 +30,8 @@ const items = [
   {
     company: "REPSOL",
     period: "2024 — 2025",
-    role: "Bases de datos SQL",
-    points: ["Bases de datos SQL", "Gestión y modelado de datos"],
+    role: "Gestión y modelado de datos",
+    points: ["Gestión y modelado de datos", "Optimización de procesos"],
   },
 ];
 
