@@ -68,46 +68,63 @@ function ServicePage() {
   return (
     <main className="min-h-screen bg-background">
       <div className="max-w-4xl mx-auto px-6 pt-16 pb-32">
-        <Link
-          to="/"
-          hash="servicios"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-12"
-        >
-          <ArrowLeft className="size-4" /> Volver a servicios
-        </Link>
+        {/* Top nav */}
+        <div className="flex items-center justify-between mb-12">
+          <Link
+            to="/"
+            hash="servicios"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <ArrowLeft className="size-4" /> Volver a servicios
+          </Link>
+          <Link
+            to="/"
+            hash="contacto"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Contacto
+          </Link>
+        </div>
 
+        {/* Hero */}
         <div className="size-16 rounded-2xl bg-gradient-primary text-primary-foreground flex items-center justify-center mb-8 shadow-glow">
           <Icon className="size-6" strokeWidth={2} />
         </div>
-
         <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">
           Servicio
         </div>
         <h1 className="text-4xl sm:text-6xl font-semibold tracking-tight mb-6">
           {service.title}
         </h1>
-        <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mb-16">
+        <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mb-20">
           {service.long}
         </p>
 
-        <div className="grid sm:grid-cols-2 gap-4 mb-16">
-          {service.features.map((f: string) => (
-            <div
-              key={f}
-              className="rounded-2xl border border-border bg-surface-elevated p-6 flex items-start gap-3"
-            >
-              <div className="size-6 rounded-full bg-gradient-primary text-primary-foreground flex items-center justify-center shrink-0 mt-0.5">
-                <Check className="size-3.5" strokeWidth={3} />
+        {/* Qué puedo hacer por ti */}
+        <section className="mb-20">
+          <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
+            Qué puedo hacer por ti
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {service.features.map((f: string) => (
+              <div
+                key={f}
+                className="rounded-2xl border border-border bg-surface-elevated p-6 flex items-start gap-3"
+              >
+                <div className="size-6 rounded-full bg-gradient-primary text-primary-foreground flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5" strokeWidth={3} />
+                </div>
+                <span className="text-foreground">{f}</span>
               </div>
-              <span className="text-foreground">{f}</span>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </section>
 
+        {/* Tecnologías utilizadas */}
         {service.tech && service.tech.length > 0 && (
-          <div className="mb-16">
+          <section className="mb-20">
             <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
-              Tecnologías
+              Tecnologías utilizadas
             </div>
             <div className="flex flex-wrap gap-2">
               {service.tech.map((t: string) => (
@@ -119,16 +136,59 @@ function ServicePage() {
                 </span>
               ))}
             </div>
-          </div>
+          </section>
         )}
 
+        {/* Proyectos y ejemplos */}
+        {service.examples && service.examples.length > 0 && (
+          <section className="mb-20">
+            <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
+              Proyectos y ejemplos
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {service.examples.map((e: string) => (
+                <div
+                  key={e}
+                  className="rounded-2xl border border-border bg-surface-elevated p-6 text-foreground"
+                >
+                  {e}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Proceso de trabajo */}
+        {service.process && service.process.length > 0 && (
+          <section className="mb-20">
+            <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
+              Proceso de trabajo
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {service.process.map((p, i) => (
+                <div
+                  key={p.title}
+                  className="rounded-2xl border border-border bg-surface-elevated p-6"
+                >
+                  <div className="text-xs font-medium text-primary mb-2 uppercase tracking-wider">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <h3 className="font-semibold mb-2">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* CTA final */}
         <div className="rounded-3xl border border-border bg-surface-elevated p-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <div>
             <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-2">
               Hablemos
             </div>
             <h2 className="text-2xl font-semibold tracking-tight">
-              ¿Listo para empezar tu proyecto?
+              Hablemos de tu proyecto
             </h2>
           </div>
           <Link
@@ -140,6 +200,7 @@ function ServicePage() {
           </Link>
         </div>
 
+        {/* Otros servicios */}
         <div className="mt-20 pt-12 border-t border-border">
           <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
             Otros servicios
