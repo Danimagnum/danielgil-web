@@ -165,7 +165,7 @@ function ServicePage() {
               Proceso de trabajo
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
-              {service.process.map((p, i) => (
+              {service.process.map((p: { title: string; desc: string }, i: number) => (
                 <div
                   key={p.title}
                   className="rounded-2xl border border-border bg-surface-elevated p-6"
