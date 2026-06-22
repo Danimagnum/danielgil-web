@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import {
   Code2,
   Sparkles,
@@ -36,8 +36,7 @@ export function Studies() {
             return (
               <Link
                 key={s.slug}
-                to="/servicios/$slug"
-                params={{ slug: s.slug }}
+                to={`/servicios/${s.slug}`}
                 className="group relative flex flex-col animate-fade-up rounded-2xl bg-surface-elevated border border-border p-6 hover:border-foreground/20 hover:shadow-elevated hover:-translate-y-1 transition-all duration-500 h-full"
                 style={{ animationDelay: `${i * 0.08}s` }}
               >
