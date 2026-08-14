@@ -1,4 +1,3 @@
-import { PrivacyPolicyPage } from "@/pages/PrivacyPolicyPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { ScrollToTop } from "@/components/ScrollToTop";
