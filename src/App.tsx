@@ -1,3 +1,4 @@
+import { PrivacyPolicyPage } from "@/pages/PrivacyPolicyPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -13,7 +14,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/servicios/:slug" element={<ServicePage />} />
-
+        <Route path="/politica-de-privacidad" element={<PrivacyPolicyPage />}
+        />
         <Route
           path="/politica-de-privacidad"
           element={<PrivacyPolicyPage />}
