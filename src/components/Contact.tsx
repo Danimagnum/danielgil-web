@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { Instagram, Linkedin, Mail, MessageCircle, QrCode } from "lucide-react";
+import { Reveal } from "./Reveal";
 import { Instagram, Linkedin, Mail, MessageCircle, QrCode } from "lucide-react";
 import { Reveal } from "./Reveal";
 
@@ -83,12 +86,27 @@ export function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <span className="size-2 rounded-full bg-gradient-primary" />
-          <span className="text-sm font-semibold">Daniel Gil · Impulso Digital</span>
+          <span className="text-sm font-semibold">
+            Daniel Gil · Impulso Digital
+          </span>
         </div>
-        <div className="text-sm text-muted-foreground">
-          digital.agrogarpe.es · © {new Date().getFullYear()}
+
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 text-sm text-muted-foreground">
+          <Link
+            to="/politica-de-privacidad"
+            className="hover:text-foreground transition-colors"
+          >
+            Política de privacidad
+          </Link>
+
+          <span className="hidden sm:inline">·</span>
+
+          <span>
+            digital.agrogarpe.es · © {new Date().getFullYear()}
+          </span>
         </div>
       </div>
     </footer>
   );
+}
 }
