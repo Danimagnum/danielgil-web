@@ -1,38 +1,40 @@
+import { useLanguage } from "@/lib/i18n";
 import { Reveal } from "./Reveal";
-
+import { Logo } from "./Logo";
+import { ArrowUpRight } from "lucide-react";
 export function About() {
+  const { t } = useLanguage();
   return (
-    <section id="sobre-mi" className="relative py-32 px-6">
-      <div className="max-w-5xl mx-auto">
-        <Reveal>
-          <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
-            01 — Sobre mí
+    <section id="sobre-mi" className="about-section section-shell">
+      <Reveal className="about-grid">
+        <div>
+          <span className="eyebrow">{t("La persona detrás del código")}</span>
+          <div className="about-monogram" aria-hidden="true">
+            <Logo />
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.05] tracking-tight max-w-4xl">
-            Desarrollo software, automatizaciones y{" "}
-            <span className="text-gradient">soluciones digitales</span> para empresas.
-          </h2>
-        </Reveal>
-
-        <div className="mt-16 grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl">
-          <Reveal delay={120}>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Soy <span className="text-foreground font-medium">Ingeniero de Telecomunicaciones</span>{" "}
-              y desarrollador <span className="text-foreground font-medium">Full Stack</span>, con
-              experiencia en desarrollo web, aplicaciones, automatización de procesos, inteligencia
-              artificial y bases de datos.
-            </p>
-          </Reveal>
-          <Reveal delay={200}>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Trabajo tanto con empresas que buscan{" "}
-              <span className="text-foreground font-medium">apoyo técnico</span> para desarrollar
-              aplicaciones y sistemas, como con negocios que desean mejorar su presencia digital y
-              optimizar procesos.
-            </p>
-          </Reveal>
         </div>
-      </div>
+        <div>
+          <h2>
+            {t("Mente de ingeniero.")}
+            <br />
+            <span className="serif-word">{t("Foco en tu negocio.")}</span>
+          </h2>
+          <p>
+            {t(
+              "Soy Daniel, ingeniero de Telecomunicaciones y desarrollador full stack. Construyo aplicaciones, conecto herramientas y automatizo procesos para que la tecnología encaje en la forma de trabajar de cada empresa.",
+            )}
+          </p>
+          <p>
+            {t(
+              "Puedo construir una solución completa desde cero o integrarme en equipos existentes para desarrollar módulos, automatizaciones e integraciones. Trabajo desde la interfaz hasta el backend, las APIs y los datos, entendiendo los procesos y el contexto de cada equipo.",
+            )}
+          </p>
+          <a className="text-link" href="#experiencia">
+            {t("Conoce mi trayectoria")}
+            <ArrowUpRight size={17} />
+          </a>
+        </div>
+      </Reveal>
     </section>
   );
 }
